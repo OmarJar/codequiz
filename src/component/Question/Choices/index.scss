@@ -1,0 +1,149 @@
+@import "animate.css";
+
+.visible {
+    display: block !important;
+}
+
+.question {
+    padding: 10px 20px;
+    display: none;
+
+    .title {
+        font-family: "Open Sans";
+        font-size: clamp(1rem, 4vh, 2rem);
+        color: #dee3e4;
+        max-width: 50vw;
+        width: 100%;
+        margin: 20px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        animation: fadeIn 1s forwards;
+        -webkit-user-select: none;
+        user-select: none;
+
+        #extra {
+            font-size: clamp(1rem, 2vh, 2rem);
+            background-color: #8abe53;
+            color: black;
+            border: rgb(69, 164, 74) 2px solid;
+            border-radius: 50% 20% / 10% 40%;
+            padding: 0 10px;
+            width: fit-content;
+        }
+    }
+
+    .choice {
+        margin-top: 10px;
+        font-family: 'Open Sans';
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        animation: fadeIn 1s forwards;
+
+        label {
+            cursor: pointer;
+
+            p {
+                font-size: clamp(1rem, 1.7vw, 1.5rem);
+                color: #dee3e4;
+            }
+        }
+
+        .form-control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+
+            &:focus-within {
+                color: var(--form-control-color);
+            }
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+            /* Add if not using autoprefixer */
+            -webkit-appearance: none;
+            /* Remove most all native input styles */
+            appearance: none;
+            /* For iOS < 15 */
+            background-color: var(--form-background);
+            /* Not removed via appearance */
+            cursor: pointer;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid currentColor;
+            border-radius: 50%;
+            transform: translateY(-0.075em);
+            display: grid;
+            place-content: center;
+
+            &:checked~p {
+                color: #8abe53;
+            }
+
+            &::before {
+                content: "";
+                width: 0.65em;
+                height: 0.65em;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em var(--form-control-color);
+                /* Windows High Contrast Mode */
+                background-color: CanvasText;
+            }
+
+
+            &:checked::before {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            &:focus {
+                
+                outline: max(2px, 0.15em) solid currentColor;
+                outline-offset: max(2px, 0.15em);
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 767px) and (max-width: 1024px){
+    
+    .question{
+        .title{
+            margin-bottom: 0;
+            width: 100%;
+            
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .visible{
+        padding: 0;
+        width: 100%;
+        text-align: left;
+    }
+    .question {
+        .title {
+            font-size: 1rem;
+            max-width: 100%;
+            margin: 0;
+            font-size: clamp(0.8rem, 2vh, 1rem);
+
+            #extra{
+                font-size: clamp(0.7rem, 2vh, 1rem);
+            }
+        }
+        .choice{
+            label{
+                p{
+                    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+                }
+            }
+        }
+    }
+}

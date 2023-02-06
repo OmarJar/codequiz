@@ -1,0 +1,50 @@
+.submit-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    progress {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: background-color 0.4s ease-out;
+        border: 0;
+        border-radius: 60% 10%;
+        font-family: "Open Sans";
+        background-color: rgb(138, 206, 125);
+        margin-top: 20px;
+
+        &:hover {
+            background-color: #8abe53;
+            transition: background-color 0.4s ease-out;
+        }
+
+        &:active {
+            background-color: rgb(254, 255, 180);
+        }
+    }
+    .no-of-questions{
+        margin-top: 20px;
+        color: #fff;
+        font-weight: 200;
+        font-family: "Open sans";
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .submit-btn {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .submit-btn{
+        margin: 0;
+    }
+}

@@ -1,0 +1,75 @@
+@import "animate.css";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&display=swap');
+
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+
+    .title {
+        font-family: 'Neuton', serif;
+        font-weight: 100;
+        color: #8abe53;
+    }
+
+    .home-page-title {
+        font-family: 'Neuton', serif;
+        width: 50%;
+        text-align: center;
+        animation: backInLeft 1s forwards ease-in-out;
+        color: #dee3e4;
+        font-weight: 100;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1024px) {
+    .home {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home {
+        margin: 5% auto;
+
+        .home-page-title {
+            max-width: 90%;
+            width: 100%;
+            font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+        }
+    }
+}
+
+@media screen and (width: 412px) {
+    .home {
+        margin: 35% auto;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5) {
+    html {
+        height: auto;
+    }
+
+    body {
+        height: 100vh;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    html {
+        height: auto;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .home {
+        margin: 35% auto;
+    }
+}
