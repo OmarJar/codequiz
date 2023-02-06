@@ -10,14 +10,14 @@ const Navbar = () => {
 
             <div className="container">
                 <div className="logo-div">
-                    <Link to="/">
+                    <Link to="/codequiz/">
                         <img className="img" src={quizLogo} alt="logo" />
                     </Link>
                 </div>
                 <div id="menu">
                     <NavLink
                         exact="true"
-                        to="/html"
+                        to="/codequiz/html"
                         activeclassname="active"
                         id="html-nav"
                         onClick={()=>{
@@ -28,7 +28,7 @@ const Navbar = () => {
 
                     <NavLink
                         exact="true"
-                        to="/css"
+                        to="/codequiz/css"
                         activeclassname="active"
                         id="css-nav"
                         onClick={()=>{
@@ -37,7 +37,7 @@ const Navbar = () => {
                         CSS
                     </NavLink>
                     <NavLink exact="true"
-                        to="/javascript"
+                        to="/codequiz/javascript"
                         activeclassname="active"
                         id="javascript-nav"
                         onClick={()=>{
@@ -47,7 +47,7 @@ const Navbar = () => {
                     </NavLink>
                     <NavLink
                         exact="true"
-                        to="/php"
+                        to="/codequiz/php"
                         activeclassname="active"
                         id="php-nav"
                         onClick={()=>{
@@ -57,7 +57,7 @@ const Navbar = () => {
                     </NavLink>
                     <NavLink
                         exact="true"
-                        to="/python"
+                        to="/codequiz/python"
                         activeclassname="active"
                         id="python-nav"
                         onClick={()=>{

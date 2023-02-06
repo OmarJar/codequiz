@@ -14,13 +14,13 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/codequiz" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="html" element={<HtmlQuiz />} />
-          <Route path="css" element={<CssQuiz />} />
-          <Route path="javascript" element={<JavaScript />} />
-          <Route path="php" element={<PhpQuiz />} />
-          <Route path="python" element={<Python/>}/>
+          <Route path="/codequiz/html" element={<HtmlQuiz />} />
+          <Route path="/codequiz/css" element={<CssQuiz />} />
+          <Route path="/codequiz/javascript" element={<JavaScript />} />
+          <Route path="/codequiz/php" element={<PhpQuiz />} />
+          <Route path="/codequiz/python" element={<Python/>}/>
         </Route>
       </Routes>
     </>
